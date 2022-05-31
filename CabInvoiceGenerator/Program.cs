@@ -5,7 +5,7 @@ Console.WriteLine("Welcome to Cab Invoice Generator");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Calculating Fare For a Ride\n2)Calculate Aggregate fare for Multiple Rides");
+    Console.WriteLine("Please choose the option :\n1)Calculating Fare For a Ride\n2)Calculate Aggregate fare for Multiple Rides\n3)Print Invoice(Num_of_Rides,Aggregate_Fare,Average_Fare_per_Ride)");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {

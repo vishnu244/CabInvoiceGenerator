@@ -46,7 +46,7 @@ namespace CabInvoiceGenerator.Tests
             int NumOfRides = 3;
             double AverageFare = Fare2 / NumOfRides;
 
-            Assert.AreEqual((int)AverageFare, AverageFare);
+            Assert.AreEqual(175, AverageFare);
         }
     }
 }
