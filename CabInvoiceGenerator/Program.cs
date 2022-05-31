@@ -3,8 +3,10 @@ using CabInvoiceGenerator;
 
 Console.WriteLine("Welcome to Cab Invoice Generator");
 
+
+
 InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
-double Fare = invoiceGenerator.TotalFare();
+double Fare = invoiceGenerator.TotalFare(10,5);
 Console.WriteLine("Total Fare for Journey = " + Fare);
 
     
