@@ -15,7 +15,7 @@ namespace CabInvoiceGenerator.Tests
         public void TotalFareTest()
         {
             InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
-            double Fare = invoiceGenerator.TotalFare(10,5);
+            double Fare = invoiceGenerator.TotalFare(10, 5);
             Assert.AreEqual(105, Fare);
         }
 
@@ -25,6 +25,15 @@ namespace CabInvoiceGenerator.Tests
             InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
             double Fare = invoiceGenerator.TotalFare(0.3, 2);
             Assert.AreEqual(5, Fare);
+        }
+
+        [TestMethod()]
+        public void TotalFareTest2()
+        {
+            InvoiceGenerator uc2 = new();
+            MultipleRides[] rides = { new MultipleRides(10, 20), new MultipleRides(15, 25) };
+            double Fare1 = uc2.TotalFare(rides);
+            Assert.AreEqual(295, Fare1);
         }
     }
 }
