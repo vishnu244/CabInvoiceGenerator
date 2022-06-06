@@ -27,7 +27,17 @@ namespace CabInvoiceGenerator
                 Fare = Fare + TotalFare(rides.Distance, rides.Time_in_minutes);
             }
             return Fare;
+        }
 
+        public void InvoiceSummary(MultipleRides[] ride)
+        {
+            foreach (MultipleRides rides in ride)
+            {
+
+                Console.WriteLine("\n" + "Distance Travelled :" + rides.Distance);
+                Console.WriteLine("Time Taken :" + rides.Time_in_minutes);
+                Console.WriteLine("Fare for ride is :" + TotalFare(rides.Distance, rides.Time_in_minutes) + "\n");
+            }
         }
     }
 }
