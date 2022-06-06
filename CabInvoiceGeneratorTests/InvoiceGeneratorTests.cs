@@ -32,7 +32,7 @@ namespace CabInvoiceGenerator.Tests
         {
             InvoiceGenerator uc2 = new();
             MultipleRides[] rides = { new MultipleRides(10, 20), new MultipleRides(15, 25) };
-            double Fare1 = uc2.TotalFare(rides);
+            double Fare1 = uc2.TotalFare(rides, "Premium");
             Assert.AreEqual(295, Fare1);
         }
 
@@ -41,12 +41,26 @@ namespace CabInvoiceGenerator.Tests
         {
             InvoiceGenerator uc3 = new();
             MultipleRides[] rides1 = { new MultipleRides(10, 20), new MultipleRides(15, 25), new MultipleRides(20, 30) };
-            double Fare2 = uc3.TotalFare(rides1);
+            double Fare2 = uc3.TotalFare(rides1, "Premium");
 
             int NumOfRides = 3;
             double AverageFare = Fare2 / NumOfRides;
             Assert.AreEqual(175, AverageFare);
 
         }
+
+        [TestMethod()]
+        public void TotalFareTest4()
+        {
+            InvoiceGenerator uc4 = new();
+            MultipleRides[] rides1 = { new MultipleRides(10, 20), new MultipleRides(15, 25), new MultipleRides(20, 30) };
+            double Fare2 = uc4.TotalFare(rides1, "Normal");
+
+            int NumOfRides = 3;
+            double AverageFare = Fare2 / NumOfRides;
+            Assert.AreEqual(525, Fare2);
+
+        }
+
     }
 }
